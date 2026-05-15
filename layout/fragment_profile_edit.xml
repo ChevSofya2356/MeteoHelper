@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main"
+    android:fillViewport="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingTop="32dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📝 Редактирование профиля"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="24dp" />
+
+        <!-- === ОСНОВНЫЕ ДАННЫЕ === -->
+
+        <!-- Имя -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя"
+            app:boxBackgroundColor="#F5F5F5"
+            app:boxStrokeColor="@color/pink_accent"
+            app:hintTextColor="@color/black"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Пользователь"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Возраст -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Возраст"
+            app:boxBackgroundColor="#F5F5F5"
+            app:boxStrokeColor="@color/pink_accent"
+            app:hintTextColor="@color/black"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Пол -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Пол"
+            app:boxBackgroundColor="#F5F5F5"
+            app:boxStrokeColor="@color/pink_accent"
+            app:hintTextColor="@color/black"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/spinnerGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="@color/black"
+                android:cursorVisible="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Заболевания -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Хронические заболевания"
+            app:boxBackgroundColor="#F5F5F5"
+            app:boxStrokeColor="@color/pink_accent"
+            app:hintTextColor="@color/black"
+            android:layout_marginBottom="24dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDiseases"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- === ТЕСТ НА МЕТЕОЗАВИСИМОСТЬ === -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧪 Тест на метеозависимость"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF387C"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Вопрос 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Как вы реагируете на смену погоды?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbQ1a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Никак не реагирую"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent" />
+
+        <RadioButton
+            android:id="@+id/rbQ1b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Иногда чувствую дискомфорт"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent" />
+
+        <RadioButton
+            android:id="@+id/rbQ1c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сильно ухудшается самочувствие"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Вопрос 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Беспокоят ли вас головные боли при смене давления?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbQ2a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Нет"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent" />
+
+        <RadioButton
+            android:id="@+id/rbQ2b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Иногда"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent" />
+
+        <RadioButton
+            android:id="@+id/rbQ2c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Часто и сильно"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Вопрос 3 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Как вы переносите жару?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbQ3a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Хорошо"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent" />
+
+        <RadioButton
+            android:id="@+id/rbQ3b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="С небольшим дискомфортом"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent" />
+
+        <RadioButton
+            android:id="@+id/rbQ3c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Очень плохо"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Вопрос 4 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Влияют ли на вас магнитные бури?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbQ4a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Не замечаю"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent" />
+
+        <RadioButton
+            android:id="@+id/rbQ4b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Чувствую лёгкое недомогание"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent" />
+
+        <RadioButton
+            android:id="@+id/rbQ4c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сильно ухудшается состояние"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Вопрос 5 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. Как часто вы чувствуете усталость без причины?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbQ5a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Редко"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent" />
+
+        <RadioButton
+            android:id="@+id/rbQ5b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Иногда"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent" />
+
+        <RadioButton
+            android:id="@+id/rbQ5c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Почти постоянно"
+            android:textColor="@color/black"
+            android:buttonTint="@color/pink_accent"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Типичные симптомы (чекбоксы) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Типичные симптомы (выбери несколько):"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/symptomsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Поле "Другое" -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Другие симптомы (не в списке)"
+            app:boxBackgroundColor="#F5F5F5"
+            app:boxStrokeColor="@color/pink_accent"
+            app:hintTextColor="@color/black"
+            android:layout_marginBottom="24dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOtherSymptoms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Кнопка сохранения -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 Сохранить профиль"
+            android:backgroundTint="@color/pink_accent"
+            android:textColor="@color/white"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="32dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основные цвета приложения (твои) -->
+    <color name="background_main">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="pink_light">#FFCADC</color>
+    <color name="pink_active">#FF548E</color>
+
+    <!-- Цвета индекса благополучия -->
+    <color name="risk_green">#4CAF50</color>
+    <color name="risk_yellow">#FFC107</color>
+    <color name="risk_red">#F44336</color>
+
+    <!-- Серые -->
+    <color name="gray_light">#EEEEEE</color>
+    <color name="gray_medium">#9E9E9E</color>
+
+    <!-- Системные цвета (нужны для Material Components) -->
+    <color name="purple_200">#FFCADC</color>
+    <color name="purple_500">#FF548E</color>
+    <color name="purple_700">#FF548E</color>
+    <color name="teal_200">#FFCADC</color>
+    <color name="teal_700">#FF548E</color>
+    <color name="pink_accent">#FF387C</color>
+
+</resources>

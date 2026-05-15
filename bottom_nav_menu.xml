@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Главная" />
+    <item
+        android:id="@+id/navigation_diary"
+        android:icon="@drawable/ic_diary"
+        android:title="Дневник" />
+    <item
+        android:id="@+id/navigation_charts"
+        android:icon="@drawable/ic_charts"
+        android:title="Графики" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Профиль" />
+</menu>
