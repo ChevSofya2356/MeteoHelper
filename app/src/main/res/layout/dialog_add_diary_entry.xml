@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок оценки -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Оцените самочувствие:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Ползунок оценки -->
+        <SeekBar
+            android:id="@+id/scoreSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="5" />
+
+        <!-- Текст оценки -->
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 / 10"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Заголовок симптомов -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выберите симптомы (можно несколько):"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Чекбоксы симптомов -->
+        <CheckBox
+            android:id="@+id/chk_headache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Головная боль" />
+
+        <CheckBox
+            android:id="@+id/chk_dizziness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Головокружение" />
+
+        <CheckBox
+            android:id="@+id/chk_weakness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Слабость / Сонливость" />
+
+        <CheckBox
+            android:id="@+id/chk_joints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Боль в суставах" />
+
+        <CheckBox
+            android:id="@+id/chk_pressure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Скачки давления" />
+
+        <CheckBox
+            android:id="@+id/chk_mood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Перепады настроения" />
+
+        <CheckBox
+            android:id="@+id/chk_heart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дискоморт в сердце" />
+
+        <!-- Поле заметок -->
+        <EditText
+            android:id="@+id/notesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Заметки (необязательно)"
+            android:layout_marginTop="16dp"
+            android:background="@android:drawable/edit_text"
+            android:padding="8dp"
+            android:minHeight="48dp" />
+
+    </LinearLayout>
+</ScrollView>

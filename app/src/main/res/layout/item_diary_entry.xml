@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Верхняя строка: дата + кнопка удаления -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvEntryDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="14.05.2026 14:30"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <ImageButton
+                android:id="@+id/btnDeleteEntry"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_delete"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Удалить запись" />
+        </LinearLayout>
+
+        <!-- Оценка -->
+        <TextView
+            android:id="@+id/tvEntryScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Оценка: 7 / 10"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp" />
+
+        <!-- Симптомы -->
+        <TextView
+            android:id="@+id/tvEntrySymptoms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Симптомы: Головная боль"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:layout_marginTop="4dp" />
+
+        <!-- Заметки -->
+        <TextView
+            android:id="@+id/tvEntryNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Заметки: —"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
